@@ -1,0 +1,15 @@
+<h1>Kotxea Aldatu</h1>
+
+<form action="updaterecord/{{ nirekotxea.id }}" method="post">
+{% csrf_token %}
+Marka:<br>
+<input name="marka" value="{{ nirekotxea.marka }}">
+<br><br>
+Modeloa:<br>
+<input name="modeloa" value="{{ nirekotxea.modeloa }}">
+<br><br>
+Matrikula:<br>
+<input name="matrikula" value="{{ nirekotxea.matrikula }}">
+<br><br>
+<input type="submit" value="Aldatu">
+</form>

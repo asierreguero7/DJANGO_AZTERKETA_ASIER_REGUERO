@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Kotxeak</h1>
+
+    <table border="1">
+      {% for x in nirekotxeak %}
+      <tr>
+        <td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
+        <td>{{ x.marka }}</td>
+        <td>{{ x.modeloa }}</td>
+        <td>{{ x.matrikula }}</td>
+        <td><a href="deletekotxeak/{{ x.id }}">ezabatu</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+    <p>
+      <a href="add/">Kotxea Sortu</a>
+    </p>
+  </body>
+</html>

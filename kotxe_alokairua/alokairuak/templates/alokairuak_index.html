@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Alokairuak</h1>
+
+    <table border="1">
+      {% for x in nirealokairuak %}
+      <tr>
+        {% for y in nirepertsonak %}
+            {% if x.pertsona_id == y.id %}
+                <td>{{ y.izena }}</td>
+            {% endif %}
+        {% endfor %}
+        {% for y in nirekotxeak %}
+            {% if x.kotxea_id == y.id %}
+                <td>{{ y.modeloa }}</td>
+            {% endif %}
+        {% endfor %}
+        <td>{{ x.hasiera_data }}</td>
+        <td>{{ x.amaiera_data }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

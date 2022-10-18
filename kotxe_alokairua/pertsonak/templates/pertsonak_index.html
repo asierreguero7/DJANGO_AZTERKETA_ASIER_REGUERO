@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Pertsonak</h1>
+
+    <table border="1">
+      {% for x in nirepertsonak %}
+      <tr>
+        <td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
+        <td>{{ x.izena }}</td>
+        <td>{{ x.abizena }}</td>
+        <td><a href="delete/{{ x.id }}">ezabatu</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+    <p>
+      <a href="add/">Pertsona Sortu</a>
+    </p>
+  </body>
+</html>
